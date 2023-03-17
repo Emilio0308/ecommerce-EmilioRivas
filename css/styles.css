@@ -193,7 +193,7 @@ button{
     height: 100%;
 }
 .menu_list a{
-    color: var(--title-color);
+    color: rgb(165, 165, 165);
 }
 .menu_list_item{
     grid-column-start: 2;
