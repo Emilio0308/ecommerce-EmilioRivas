@@ -4,7 +4,7 @@ function filtrar(print) {
     let selecPrice = document.getElementById(`selecPrice`)
     botonLista.addEventListener(`click`, function () {
         let data = JSON.parse(localStorage.getItem(`dataBase`))
-        if(listValue.value == `todos`) ordenar( data )
+        if(listValue.value == `todos`) ordenar(data)
         else{
             let arrayFiltrado = []
             data.forEach( element => {
@@ -13,7 +13,7 @@ function filtrar(print) {
             ordenar(arrayFiltrado)
         }
         function ordenar(arrayFiltrado) {
-            if(selecPrice.value == `todos`) print( data )
+            if(selecPrice.value == `todos`) print( arrayFiltrado )
             else if(selecPrice.value == `ascendente`){
                 arrayFiltrado = arrayFiltrado.sort((a, b ) => a.price -b.price)
                 print(arrayFiltrado)
