@@ -11,12 +11,14 @@ import darkModeToggle from "./componentes/darkmode.js";
 
 
 
+
 loader()
 carrito()
 menu ()
 let {db,printProducts} = products (await obtenerDatos())
 cart(db,printProducts)
 filtrar(printProducts)
+
 
 
 // console.log(printProducts( await obtenerDatos()))

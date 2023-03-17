@@ -23,6 +23,18 @@ function cart(db, printProducts) {
     printVacio()
     localStorage.setItem(`cart`, JSON.stringify(carrito));
   }
+  function notify() {
+    let notifyCarrito = document.querySelector(`.notifyCarrito`)
+    let value = carrito
+    // JSON.parse(localStorage.getItem(`cart`))
+    console.log(value)
+    value = value ? value : 0
+    let sum= 0
+    value.forEach(element => {
+        sum += element.cantidad
+    });
+    notifyCarrito.innerHTML = sum 
+  }
   function prinCart(data) {
     let code = ``;
     for (const product of data) {
@@ -54,6 +66,7 @@ function cart(db, printProducts) {
     }
     itemContainer.innerHTML = code;
     botonComprar.disabled = false
+    notify()
     obtenerTotales();
     if(itemContainer.innerHTML==``) printVacio()
   }

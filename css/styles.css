@@ -199,6 +199,30 @@ button{
     grid-column-start: 2;
     grid-column-end: 4;
 }
+
+.clase_notify{
+    position: relative;
+}
+
+.clase_notify > span{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 25px;
+    overflow: hidden;
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    right: -5px;
+    left: 0;
+    bottom: 0;
+    top: -15px; 
+    margin: auto;
+    font-weight: var(--sbold-font);
+}
+
 .main{
     padding-bottom: var(--header-height);  
     width: 100%;
