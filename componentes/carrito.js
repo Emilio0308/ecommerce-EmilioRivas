@@ -88,7 +88,7 @@ function cart(db, printProducts) {
     };
     let buscarInCart = carrito.find((elemento) => elemento.id == idProducto);
       if (buscarInCart) {
-        if(buscarInCart.stock==0 || buscarInCart.cantidad == buscarInCart.stock) {
+        if(buscarInCart.stock==0 || buscarInCart.cantidad == productoAnalizar.quantity) {
           alert(`Limite de productos alcanzado`)
           buscarInCart.cantidad = buscarInCart.cantidad- 1
         }
@@ -190,6 +190,7 @@ function cart(db, printProducts) {
     contenedorProductos.innerHTML= ``
     printProducts(dataBase)
     printVacio()
+    notify()
     totalArt.innerHTML = 0;
     totalCost.innerHTML = 0
 
