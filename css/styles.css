@@ -171,6 +171,16 @@ button{
     width: 100%;
     transition: all 0.2s cubic-bezier(0.32, 0.77, 0.54, 0.73);
 }
+.close_menu{
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+}
 .menu_active{
     width: 100vw;
     height: 50vh;
@@ -191,6 +201,7 @@ button{
     border: 5px solid black;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 .menu_list a{
     color: rgb(165, 165, 165);
@@ -659,6 +670,9 @@ button{
     .menu_list_item  > a{
         font-size: 0.7rem;
         letter-spacing: 1px;
+    }
+    .close_menu{
+        display: none;
     }
     .menu_list_item  > a:hover{
         font-size: 0.8rem;

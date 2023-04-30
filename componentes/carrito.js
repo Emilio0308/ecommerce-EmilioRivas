@@ -94,7 +94,6 @@ function cart(db, printProducts) {
         }
         buscarInCart.cantidad += 1;
         prinCart(carrito);
-        console.log(buscarInCart.cantidad)
       }
       else {
         carrito.push(cartItem);
@@ -198,9 +197,3 @@ function cart(db, printProducts) {
 }
 
 export default cart;
-
-
-// if(buscarInCart.cantidad < buscarInCart.stock){
-//   alert(`no hay stock`)
-// }
-// else 
